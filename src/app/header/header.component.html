@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+    
+    
+    <div class="container">
+        <ul class="nav navbar-nav">
+                <img style="max-height: 50px; max-width: 50px; " src="../../assets/img/44253-playstation-souls-dark-file-iii-bonfire.png">
+            <li routerLinkActive="active">
+                <a routerLink="/vgs">Jeux</a>
+            </li>
+        </ul>
+        <ul class="nav navabar-nav navbar-right">
+            <li routerLinkActive="active" *ngIf="!isAuth">
+                <a routerLink="auth/signup">Créer un compte</a>
+            </li>
+        </ul>
+        
+        <ul class="nav navabar-nav navbar-right">
+            <li routerLinkActive="active" *ngIf="!isAuth">
+                <a routerLink="auth/signin">Connexion</a>
+            </li>
+            <li>
+                <a (click)="onSignOut()" *ngIf="isAuth" style="cursor:pointer"><span class="glyphicon glyphicon-off pull-left">Déconnexion</span></a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
